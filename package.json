@@ -1,0 +1,60 @@
+{
+  "name": "nopixie-icon-theme",
+  "displayName": "No Pixie Icon Theme",
+  "description": "A minimal icon theme for VS Code",
+  "version": "1.2.0",
+  "publisher": "no-pixie",
+  "icon": "images/icon.jpg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nopixie/nopixie-icon-theme"
+  },
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "no-pixie-purple-icons",
+        "label": "No Pixie Purple Icons",
+        "path": "./themes/no-pixie-purple-icon-theme.json"
+      },
+      {
+        "id": "no-pixie-blue-icons",
+        "label": "No Pixie Blue Icons",
+        "path": "./themes/no-pixie-blue-icon-theme.json"
+      },
+      {
+        "id": "no-pixie-yellow-icons",
+        "label": "No Pixie Yellow Icons",
+        "path": "./themes/no-pixie-yellow-icon-theme.json"
+      }
+    ]
+  },
+  "keywords": [
+    "icon-theme",
+    "icons",
+    "file-icons",
+    "folder-icons"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "generate-icons": "node scripts/generate-icons.js",
+    "package": "npm run generate-icons && vsce package",
+    "publish:vsce": "vsce publish",
+    "publish:ovsx": "ovsx publish",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
+    "@vscode/vsce": "^2.22.0",
+    "conventional-changelog-cli": "5.0.0",
+    "husky": "9.1.7",
+    "ovsx": "^0.10.6"
+  }
+}

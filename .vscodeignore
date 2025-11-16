@@ -1,0 +1,14 @@
+.vscode/**
+.github/**
+.gitignore
+.gitattributes
+node_modules/**
+examples/**
+**/*.md
+!README.md
+!CHANGELOG.md
+.husky/**
+.commitlintrc.json
+renovate.json
+scripts/**
+.claude/**
