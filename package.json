@@ -2,7 +2,7 @@
   "name": "nopixie-icon-theme",
   "displayName": "No Pixie Icon Theme",
   "description": "A minimal icon theme for VS Code",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "publisher": "no-pixie",
   "icon": "images/icon.jpg",
   "license": "MIT",
