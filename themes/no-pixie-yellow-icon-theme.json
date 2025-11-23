@@ -35,6 +35,30 @@
     "_folder_git_open": {
       "iconPath": "../icons/yellow/folder-git-open.svg"
     },
+    "_folder_github": {
+      "iconPath": "../icons/yellow/folder-github.svg"
+    },
+    "_folder_github_open": {
+      "iconPath": "../icons/yellow/folder-github-open.svg"
+    },
+    "_folder_gitlab": {
+      "iconPath": "../icons/yellow/folder-gitlab.svg"
+    },
+    "_folder_gitlab_open": {
+      "iconPath": "../icons/yellow/folder-gitlab-open.svg"
+    },
+    "_folder_workflows": {
+      "iconPath": "../icons/yellow/folder-workflows.svg"
+    },
+    "_folder_workflows_open": {
+      "iconPath": "../icons/yellow/folder-workflows-open.svg"
+    },
+    "_folder_ci": {
+      "iconPath": "../icons/yellow/folder-ci.svg"
+    },
+    "_folder_ci_open": {
+      "iconPath": "../icons/yellow/folder-ci-open.svg"
+    },
     "_folder_test": {
       "iconPath": "../icons/yellow/folder-test.svg"
     },
@@ -187,6 +211,15 @@
     },
     "_file_git": {
       "iconPath": "../icons/yellow/file-git.svg"
+    },
+    "_file_github": {
+      "iconPath": "../icons/yellow/file-github.svg"
+    },
+    "_file_github-actions": {
+      "iconPath": "../icons/yellow/file-github-actions.svg"
+    },
+    "_file_gitlab-ci": {
+      "iconPath": "../icons/yellow/file-gitlab-ci.svg"
     }
   },
   "folder": "_folder",
@@ -203,8 +236,10 @@
     "node_modules": "_folder_node",
     ".npm": "_folder_node",
     ".git": "_folder_git",
-    ".github": "_folder_git",
-    ".gitlab": "_folder_git",
+    ".github": "_folder_github",
+    ".gitlab": "_folder_gitlab",
+    "workflows": "_folder_workflows",
+    "ci": "_folder_ci",
     "test": "_folder_test",
     "tests": "_folder_test",
     "__tests__": "_folder_test",
@@ -239,8 +274,10 @@
     "node_modules": "_folder_node_open",
     ".npm": "_folder_node_open",
     ".git": "_folder_git_open",
-    ".github": "_folder_git_open",
-    ".gitlab": "_folder_git_open",
+    ".github": "_folder_github_open",
+    ".gitlab": "_folder_gitlab_open",
+    "workflows": "_folder_workflows_open",
+    "ci": "_folder_ci_open",
     "test": "_folder_test_open",
     "tests": "_folder_test_open",
     "__tests__": "_folder_test_open",
@@ -344,7 +381,16 @@
     "Dockerfile": "_file_docker",
     ".gitignore": "_file_git",
     ".gitattributes": "_file_git",
-    ".dockerignore": "_file_docker"
+    ".dockerignore": "_file_docker",
+    "CODEOWNERS": "_file_github",
+    "FUNDING.yml": "_file_github",
+    "dependabot.yml": "_file_github-actions",
+    "action.yml": "_file_github-actions",
+    "action.yaml": "_file_github-actions",
+    "CONTRIBUTING.md": "_file_github",
+    "CODE_OF_CONDUCT.md": "_file_github",
+    "SECURITY.md": "_file_github",
+    ".gitlab-ci.yml": "_file_gitlab-ci"
   },
   "languageIds": {
     "javascript": "_file_js",

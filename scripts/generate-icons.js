@@ -94,6 +94,14 @@ const fileTypes = {
   // Version control
   git: { icon: 'git', color: 'fileAccent', label: 'Git' },
 
+  // GitHub
+  github: { icon: 'github', color: 'fileAccent', label: 'GitHub' },
+  githubActions: { icon: 'github-actions', color: 'primary', label: 'GitHub Actions' },
+
+  // GitLab
+  gitlab: { icon: 'gitlab', color: 'fileAccent', label: 'GitLab' },
+  gitlabCI: { icon: 'gitlab-ci', color: 'primary', label: 'GitLab CI' },
+
   // Shell scripts
   shell: { icon: 'sh', color: 'file', label: 'Shell' },
   powershell: { icon: 'ps1', color: 'tertiary', label: 'PowerShell' },
@@ -140,6 +148,61 @@ const icons = {
   <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M14 2V8H20" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="12" y="17" text-anchor="middle" fill="${color}" font-family="Arial, sans-serif" font-size="5" font-weight="bold">${text}</text>
+</svg>`,
+
+  fileGithub: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" fill="${color}" opacity="0.3"/>
+  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 2V8H20" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="12" cy="14" r="3.5" stroke="${color}" stroke-width="1.2" fill="none"/>
+  <path d="M12 10.5V11.2M12 16.8V17.5M15.5 14H14.8M9.2 14H8.5" stroke="${color}" stroke-width="1.2" stroke-linecap="round"/>
+</svg>`,
+
+  fileGitlab: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" fill="${color}" opacity="0.3"/>
+  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 2V8H20" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 17L9 12H15L12 17Z" fill="${color}" opacity="0.5"/>
+  <path d="M12 11L10.5 12.5L12 17L13.5 12.5L12 11Z" stroke="${color}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`,
+
+  fileCI: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" fill="${color}" opacity="0.3"/>
+  <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 2V8H20" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="12" cy="14" r="3" stroke="${color}" stroke-width="1.2" fill="none"/>
+  <circle cx="12" cy="14" r="1" fill="${color}"/>
+  <path d="M12 11V10M12 18V17M15 14H16M8 14H9" stroke="${color}" stroke-width="1" stroke-linecap="round"/>
+</svg>`,
+
+  folderGithub: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" fill="${color}" opacity="0.3"/>
+  <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="13" r="2.5" stroke="${color}" stroke-width="1" fill="none"/>
+  <path d="M16 10.5V11.2M16 14.8V15.5M18.5 13H17.8M14.2 13H13.5" stroke="${color}" stroke-width="1" stroke-linecap="round"/>
+</svg>`,
+
+  folderGithubOpen: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M22 19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H9L11 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19Z" fill="${color}" opacity="0.3"/>
+  <path d="M2 19C2 19.5304 2.21071 20.0391 2.58579 20.4142C2.96086 20.7893 3.46957 21 4 21H20C20.5304 21 21.0391 20.7893 21.4142 20.4142C21.7893 20.0391 22 19.5304 22 19V12H2V19Z" fill="${color}" opacity="0.5"/>
+  <path d="M22 19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H9L11 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="15" r="2.5" stroke="${color}" stroke-width="1" fill="none"/>
+  <path d="M16 12.5V13.2M16 16.8V17.5M18.5 15H17.8M14.2 15H13.5" stroke="${color}" stroke-width="1" stroke-linecap="round"/>
+</svg>`,
+
+  folderGitlab: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" fill="${color}" opacity="0.3"/>
+  <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 15L14 11H18L16 15Z" fill="${color}" opacity="0.5"/>
+  <path d="M16 11L15 12.5L16 15L17 12.5L16 11Z" stroke="${color}" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`,
+
+  folderGitlabOpen: (color) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M22 19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H9L11 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19Z" fill="${color}" opacity="0.3"/>
+  <path d="M2 19C2 19.5304 2.21071 20.0391 2.58579 20.4142C2.96086 20.7893 3.46957 21 4 21H20C20.5304 21 21.0391 20.7893 21.4142 20.4142C21.7893 20.0391 22 19.5304 22 19V12H2V19Z" fill="${color}" opacity="0.5"/>
+  <path d="M22 19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H9L11 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 17L14 13H18L16 17Z" fill="${color}" opacity="0.5"/>
+  <path d="M16 13L15 14.5L16 17L17 14.5L16 13Z" stroke="${color}" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`,
 };
 
@@ -188,6 +251,45 @@ function generateIcons(variant, palette) {
     );
   });
 
+  // Generate GitHub-specific folders
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-github.svg'),
+    icons.folderGithub(palette.fileAccent)
+  );
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-github-open.svg'),
+    icons.folderGithubOpen(palette.fileAccent)
+  );
+
+  // Generate GitLab-specific folders
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-gitlab.svg'),
+    icons.folderGitlab(palette.fileAccent)
+  );
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-gitlab-open.svg'),
+    icons.folderGitlabOpen(palette.fileAccent)
+  );
+
+  // Generate CI/CD workflow folders
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-workflows.svg'),
+    icons.folder(palette.primary)
+  );
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-workflows-open.svg'),
+    icons.folderOpen(palette.primary)
+  );
+
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-ci.svg'),
+    icons.folder(palette.primary)
+  );
+  fs.writeFileSync(
+    path.join(variantDir, 'folder-ci-open.svg'),
+    icons.folderOpen(palette.primary)
+  );
+
   // Generate default file icon
   fs.writeFileSync(
     path.join(variantDir, 'file.svg'),
@@ -201,7 +303,15 @@ function generateIcons(variant, palette) {
 
     // Determine which icon template to use
     let svgContent;
-    if (['js', 'ts', 'py', 'java', 'cpp', 'c', 'cs', 'go', 'rs', 'php', 'rb'].includes(config.icon)) {
+    if (config.icon === 'github') {
+      svgContent = icons.fileGithub(color);
+    } else if (config.icon === 'github-actions') {
+      svgContent = icons.fileCI(color);
+    } else if (config.icon === 'gitlab') {
+      svgContent = icons.fileGitlab(color);
+    } else if (config.icon === 'gitlab-ci') {
+      svgContent = icons.fileCI(color);
+    } else if (['js', 'ts', 'py', 'java', 'cpp', 'c', 'cs', 'go', 'rs', 'php', 'rb'].includes(config.icon)) {
       svgContent = icons.fileCode(color);
     } else if (config.icon.length <= 4) {
       svgContent = icons.fileText(color, config.icon.toUpperCase());
@@ -264,7 +374,11 @@ function generateIconThemeDefinition(variant, palette) {
     'src': 'src', 'source': 'src', 'sources': 'src',
     'dist': 'dist', 'build': 'dist', 'out': 'dist', 'output': 'dist',
     'node_modules': 'node', '.npm': 'node',
-    '.git': 'git', '.github': 'git', '.gitlab': 'git',
+    '.git': 'git',
+    '.github': 'github',
+    '.gitlab': 'gitlab',
+    'workflows': 'workflows',
+    'ci': 'ci',
     'test': 'test', 'tests': 'test', '__tests__': 'test', 'spec': 'test', 'specs': 'test',
     'docs': 'docs', 'doc': 'docs', 'documentation': 'docs',
     'config': 'config', 'configuration': 'config', '.vscode': 'config', '.config': 'config',
@@ -392,6 +506,19 @@ function generateIconThemeDefinition(variant, palette) {
     '.gitignore': 'git',
     '.gitattributes': 'git',
     '.dockerignore': 'docker',
+
+    // GitHub files
+    'CODEOWNERS': 'github',
+    'FUNDING.yml': 'github',
+    'dependabot.yml': 'github-actions',
+    'action.yml': 'github-actions',
+    'action.yaml': 'github-actions',
+    'CONTRIBUTING.md': 'github',
+    'CODE_OF_CONDUCT.md': 'github',
+    'SECURITY.md': 'github',
+
+    // GitLab files
+    '.gitlab-ci.yml': 'gitlab-ci',
   };
 
   Object.entries(fileNameMapping).forEach(([fileName, iconName]) => {
